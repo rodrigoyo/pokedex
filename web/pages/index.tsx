@@ -1,16 +1,14 @@
 import React from 'react'
-
-import Head from 'next/head'
+import Head from '../src/infra/components/Head'
+import Header from '../src/pattern/Header'
 
 const Home: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>Create Next App</title>
-      </Head>
-
+    <>
+      <Head>Pokedex</Head>
+      <Header />
       <main>TESTE</main>
-    </div>
+    </>
   )
 }
 
