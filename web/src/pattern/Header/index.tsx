@@ -9,11 +9,11 @@ const Header: React.FC = props => {
       justify="space-between"
       wrap="wrap"
       padding="1.5rem"
-      bg="teal.500"
+      bg="gray.500"
       color="white"
       {...props}
     >
-      POKEDEX
+      Pokedex
     </Flex>
   )
 }
