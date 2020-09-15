@@ -8,8 +8,8 @@ interface IPokemon {
 const PokeCard: React.FC<IPokemon> = ({ name, image }) => {
   return (
     <Flex
-      minW="186px"
-      maxW="186px"
+      minW="156px"
+      maxW="156px"
       borderWidth="1px"
       rounded="lg"
       overflow="hidden"

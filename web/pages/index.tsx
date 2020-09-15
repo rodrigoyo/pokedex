@@ -41,7 +41,7 @@ const Home: React.FC = () => {
         wrap="wrap"
         alignContent="flex-start"
         alignItems="flex-start"
-        justifyContent="space-between"
+        justifyContent="space-around"
         margin="16px"
       >
         {pokemons &&
