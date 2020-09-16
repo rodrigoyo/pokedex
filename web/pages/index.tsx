@@ -7,6 +7,7 @@ import PokeCard from '../src/pattern/PokeCard'
 
 interface IPokemon {
   name: string
+  number: string
   image: string
 }
 
@@ -22,6 +23,7 @@ const Home: React.FC = () => {
         const number = link.pathname.split('/')[4]
         return {
           name,
+          number: number.padStart(3, '0'),
           image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`
         }
       })
@@ -39,15 +41,22 @@ const Home: React.FC = () => {
       <Flex
         as="main"
         wrap="wrap"
-        alignContent="flex-start"
-        alignItems="flex-start"
-        justifyContent="space-around"
-        margin="16px"
+        alignContent="center"
+        alignItems="center"
+        justifyItems="center"
+        justifyContent="center"
+        align="center"
+        margin="1em"
       >
         {pokemons &&
           pokemons.map((pokemon, i) => {
             return (
-              <PokeCard key={i} name={pokemon.name} image={pokemon.image} />
+              <PokeCard
+                key={i}
+                name={pokemon.name}
+                number={pokemon.number}
+                image={pokemon.image}
+              />
             )
           })}
       </Flex>

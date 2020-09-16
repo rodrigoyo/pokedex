@@ -3,31 +3,50 @@ import React from 'react'
 
 interface IPokemon {
   name: string
+  number: string
   image: string
 }
-const PokeCard: React.FC<IPokemon> = ({ name, image }) => {
+const PokeCard: React.FC<IPokemon> = ({ name, number, image }) => {
   return (
     <Flex
-      minW="156px"
-      maxW="156px"
+      minWidth="156px"
+      maxWidth="156px"
       borderWidth="1px"
       rounded="lg"
       overflow="hidden"
       flexDirection="column"
+      margin="8px"
+      backgroundColor="gray.700"
     >
-      <Box alignSelf="center">
+      <Box display="flex" alignSelf="center" paddingTop="8px">
         <Image src={image} alt={name} />
       </Box>
-      <Box p="3">
-        <Box d="flex" alignItems="baseline" justifyContent="center">
+      <Box
+        padding="3"
+        alignSelf="center"
+        width="100%"
+        backgroundColor="gray.800"
+      >
+        <Box display="flex" flexDir="column" alignItems="center">
           <Box
-            d="flex"
+            display="flex"
             color="gray.500"
             fontWeight="semibold"
             letterSpacing="wide"
-            fontSize="xs"
-            textTransform="uppercase"
-            ml="2"
+          >
+            <Badge rounded="full" px="2" color="gray.400">
+              {`Nº ${number}`}
+            </Badge>
+          </Box>
+
+          <Box
+            as="h4"
+            display="flex"
+            marginTop={2}
+            lineHeight="tight"
+            color="gray.500"
+            letterSpacing="wide"
+            textTransform="capitalize"
           >
             {name}
           </Box>
