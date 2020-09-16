@@ -16,7 +16,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     async function loadPokemons() {
       const response = await axios.get(
-        'https://pokeapi.co/api/v2/pokemon?limit=10'
+        'https://pokeapi.co/api/v2/pokemon?limit=50'
       )
       const pokemonsLoaded = response.data.results.map(({ name, url }) => {
         const link = new URL(url)

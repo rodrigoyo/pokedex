@@ -47,6 +47,7 @@ const PokeCard: React.FC<IPokemon> = ({ name, number, image }) => {
             color="gray.500"
             letterSpacing="wide"
             textTransform="capitalize"
+            fontSize={14}
           >
             {name}
           </Box>
