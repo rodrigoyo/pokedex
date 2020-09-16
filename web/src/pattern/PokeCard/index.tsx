@@ -11,12 +11,17 @@ const PokeCard: React.FC<IPokemon> = ({ name, number, image }) => {
     <Flex
       minWidth="156px"
       maxWidth="156px"
-      borderWidth="1px"
+      borderWidth="2px"
       rounded="lg"
       overflow="hidden"
       flexDirection="column"
       margin="8px"
       backgroundColor="gray.700"
+      _hover={{
+        borderWidth: '2px',
+        borderColor: 'gray.200',
+        cursor: 'pointer'
+      }}
     >
       <Box display="flex" alignSelf="center" paddingTop="8px">
         <Image src={image} alt={name} />
